@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     restart: always
     volumes:
-      - ./www:/usr/local/apps/mysite/resume/www/
+      - ./www:/var/www/
     ports:
       - 8082:80
       - 4432:443
