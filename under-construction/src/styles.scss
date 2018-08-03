@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Copperplate Gothic';
+    src: url('/assets/fonts/CopperplateGothic/CopperplateGothic-Bold.eot');
+    src: url('/assets/fonts/CopperplateGothic/CopperplateGothic-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/CopperplateGothic/CopperplateGothic-Bold.woff2') format('woff2'),
+        url('/assets/fonts/CopperplateGothic/CopperplateGothic-Bold.woff') format('woff'),
+        url('/assets/fonts/CopperplateGothic/CopperplateGothic-Bold.ttf') format('truetype'),
+        url('/assets/fonts/CopperplateGothic/CopperplateGothic-Bold.svg#CopperplateGothic-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('/assets/background-brick-wall.jpg');
+    font-size: 16px;
+}
+
+@media (max-width: 992px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 12px;
+    }
+}

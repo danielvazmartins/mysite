@@ -1,12 +1,6 @@
-# resume
-Página com a versão online do curriculo
+# Resume
 
-# Projeto
-- Layout
-- Desenvolvimento (Angular)
-- Ícones
-- Estrutura de infra (docker, nginx)
-- DNS
-- SSL
-- Analytics
-- SEO
+# Comandos utilizados
+ng g c data-group --spec=false
+ng g c course-group --spec=false
+ng g c experience-group --spec=false

@@ -1,13 +1,13 @@
 .blur {
     margin: auto;
-    background: url('/assets/background-blur.png');
-    background-size: 100% 100%;
+    max-width: 1000px;
+    background: url('/assets/background-blur.png') center;
+    background-size: 105% 100%;
     box-sizing: border-box;
-    padding-top: 70px;
-    padding-bottom: 150px;
+    padding: 100px 10px 150px 10px;
 
     .box-title {
-        font-family: Copperplate;
+        font-family: 'Copperplate Ghotic';
         text-align: center;
         color: #EF8A40;
         text-shadow: #AC8B74 0 3px 6px;
@@ -15,12 +15,11 @@
         margin: 20px 0;
 
         h1 {
-            font-size: 64px;
-            font-weight: normal;
+            font-size: 3em;
         }
 
         p {
-            font-size: 32px;
+            font-size: 1.5em;
         }
     }
     
@@ -28,15 +27,17 @@
         background: #FFFFFF;
         border: #EF8A40 solid 3px;
         border-radius: 25px;
-        width: 600px;
+        max-width: 600px;
         margin: auto;
         display: flex;
+        flex-wrap: wrap;
         padding: 20px;
 
         .perfil {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            margin: auto;
 
             .avatar {
                 width: 130px;
@@ -50,14 +51,15 @@
         .dados {
             color: #644B39;
             font-family: Helvetica;
-            font-size: 16px;
+            font-size: 1em;
             margin-left: 40px;
             margin-top: 5px;
+            flex-grow: 2;
 
             .title {
                 font-family: Georgia;
                 font-style: italic;
-                font-size: 29px;
+                font-size: 1.8em;
                 margin-bottom: 0px;
             }
 
@@ -77,6 +79,32 @@
 
             .icon-mail {
                 background: url('/assets/icon-mail.svg') no-repeat;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+    .blur {
+        .box-title {
+            h1 {
+                font-size: 3em;
+            }
+            p {
+                font-size: 1.5em;
+            }
+        }
+        .box-contato {
+            .dados {
+                margin-left: 0px;
             }
         }
     }

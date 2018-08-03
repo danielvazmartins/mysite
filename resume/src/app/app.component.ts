@@ -1,0 +1,242 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent {
+  resume = {
+    name: 'Daniel Vaz Villalobos Martins',
+    occupation: 'Analista / Desenvolvedor de Sistemas',
+    dateOfBirth: '17/08/1983',
+    address: {
+      line1: 'Av. Vila Ema, 3793 ap 103C',
+      line2: 'Cep 03281-001 - São Paulo-SP'
+    },
+    mobile: '(11) 96450-0218',
+    email: 'danielvazmartins@gmail.com',
+    skills: [
+      {
+        type: 'Back-end',
+        skills: ['NodeJs', 'Java', 'PHP']
+      },
+      {
+        type: 'Front-end',
+        skills: ['Angular', 'AngularJs', 'JQuery', 'JavaScript', 'ES6', 'TypeScript', 'PWA', 'Bootstrap', 'Material Design', 'CSS', 'SASS', 'Gulp']
+      },
+      {
+        type: 'Database',
+        skills: ['Mysql', 'Sql Server', 'Postgree', 'MongoDB', 'Elasticsearch']
+      },
+      {
+        type: 'Mobile',
+        skills: ['Android com Java', 'iOS com Objective-C']
+      },
+      {
+        type: 'Infraestrutura',
+        skills: ['Administração de servidores Windows e Linux', 'Docker', 'Cloud (AWS, Google Cloud, Digital Ocean)', 'servidores web ( Nginx, Apache, Jetty)', 'DNS', 'VMWare', 'Firewall', 'Shell scripts']
+      },
+      {
+        type: 'Design',
+        skills: ['Photoshop', 'Illustrator', 'MarvelApp', 'Adobe XD']
+      }
+    ],
+    aboutMe: 'Formado em Ciências da Computação e pós graduado em Gerenciamento de Projetos, trabalho a mais de 15 anos na área de informática, sempre gostei muito do que faço, é uma área que gosto de estudar e estar sempre aprendendo algo novo. Até hoje não parei de estudar, sempre estou fazendo algum curso ou estudando alguma tecnologia nova.',
+    professionalGoals: 'Atuar na área de análise e desenvolvimento de sistemas, seja como full-stack, back-end, front-end, ou até mesmo com desenvolvimento de apps nativos. Tenho também grande experiência na área de infraestrutura, porém hoje estou mais voltado para a área de desenvolvimento.',
+    academicQualifications: [
+      {
+        dateConclusion: '2017',
+        institution: 'Universidade Metodista de São Paulo',
+        course: 'Pós Graduação em Gerenciamento de Projetos de TI com práticas alinhadas ao PMI'
+      },
+      {
+        dateConclusion: '2005',
+        institution: 'UniFEI  -  Centro Universitário da FEI',
+        course: 'Bacharel em Ciências da Computação'
+      }
+    ],
+    certifications: [
+      {
+        dateConclusion: '30/04/2013',
+        institution: 'VTEX',
+        course: 'VTEX Interface Developer Certified (VID)'
+      },
+      {
+        dateConclusion: '22/08/2011',
+        institution: 'Microsoft',
+        course: 'MCTS – Microsoft Exchange Server 2010, Configuration'
+      },
+      {
+        dateConclusion: '29/12/2010',
+        institution: 'Microsoft',
+        course: 'MCTS – Windows 7, Configuration'
+      },
+      {
+        dateConclusion: '27/04/2010',
+        institution: 'Microsoft',
+        course: 'MCTS – Microsoft Windows SharePoint Services 3.0, Configuration'
+      },
+      {
+        dateConclusion: '27/11/2009',
+        institution: 'Microsoft',
+        course: 'MCSA - Microsoft Windows Server 2003 Network Infrastructure'
+      },
+      {
+        dateConclusion: '12/05/2009',
+        institution: 'Microsoft',
+        course: 'MCSA - Microsoft Windows Server 2003 Environment'
+      },
+      {
+        dateConclusion: '23/11/2010',
+        institution: 'BlackBerry',
+        course: 'BlackBerry Certified Server Support Specialist (v5.0)'
+      },
+      {
+        dateConclusion: '22/10/2010',
+        institution: 'BlackBerry',
+        course: 'BlackBerry Certified Support Specialist (v5.0)'
+      },
+      {
+        dateConclusion: '10/08/2008',
+        institution: 'Cisco',
+        course: 'Cisco Certified Network Associate - Cisco ID# CSCO10955792'
+      }
+    ],
+    technicalQualifications: [
+      {
+        dateConclusion: '07/2001',
+        institution: 'E.T.E. Getúlio Vargas (18 meses)',
+        course: 'Técnico em Eletrônica'
+      },
+      {
+        dateConclusion: '12/1999',
+        institution: 'Senai Roberto Simonsen (2 anos)',
+        course: 'CAI(Curso de Aprendizagem Industrial) de Eletrônica'
+      }
+    ],
+    extraCourses: [
+      {
+        dateConclusion: '01/2015',
+        institution: 'Saga',
+        workload: '408 horas / 2 anos',
+        course: 'Computação Gráfica (Photoshop, Illustrator, Dreamweaver, Flash, Premiere, AfterEffects, Maya, etc)'
+      },
+      {
+        dateConclusion: '05/2014',
+        institution: 'Clarify Treinamentos',
+        workload: '24 horas',
+        course: 'Microsoft Project 2013 - Gerenciamento de Projetos'
+      },
+      {
+        dateConclusion: '07/2010',
+        institution: 'Brás & Figueiredo',
+        workload: '20 horas',
+        course: '2824 – Implementing Microsoft Internet Security and Acceleration Server 2004'
+      },
+      {
+        dateConclusion: '03/2010',
+        institution: 'Brás & Figueiredo',
+        workload: '20 horas',
+        course: '6292 – Installing and Configuring Windows 7 Client'
+      },
+      {
+        dateConclusion: '12/2008',
+        institution: 'Brás & Figueiredo',
+        workload: '40 horas',
+        course: '2277 – Implementing, Managing, and Maintaining a MS Win 2003 Network Infrastructure: Network Services'
+      },
+      {
+        dateConclusion: '12/2008',
+        institution: 'Brás & Figueiredo',
+        workload: '16 horas',
+        course: '2276 – Implementing a Microsoft Windows Server 2003 Network Insfrastructure : Network Hosts'
+      },
+      {
+        dateConclusion: '10/2008',
+        institution: 'Brás & Figueiredo',
+        workload: '24 horas',
+        course: '2275 – Maintaining a Microsoft Windows Server 2003 Enviroment'
+      },
+      {
+        dateConclusion: '09/2008',
+        institution: 'Brás & Figueiredo',
+        workload: '40 horas',
+        course: '2274 – Managing a Microsoft Windows Server 2003 Environment'
+      },
+      {
+        dateConclusion: '09/2006',
+        institution: 'Brás & Figueiredo',
+        workload: '40 horas',
+        course: '2400 – Implementing and Managing Microsoft Exchange Server 2003'
+      },
+      {
+        dateConclusion: '08/2007',
+        institution: 'Green Treinamento',
+        workload: '8 horas',
+        course: 'Introdução a Firewall – Linux'
+      },
+      {
+        dateConclusion: '08/2007',
+        institution: 'Green Treinamento',
+        workload: '40 horas',
+        course: 'LPI 102 – Administração de Redes Linux'
+      },
+      {
+        dateConclusion: '07/2007',
+        institution: 'Green Treinamento',
+        workload: '40 horas',
+        course: 'LPI 101 – Administração de Sistemas Linux'
+      },
+      {
+        dateConclusion: '01/2011',
+        institution: 'CNA',
+        workload: '2 módulos',
+        course: 'Advanced Conversation Course'
+      },
+      {
+        dateConclusion: '12/2008',
+        institution: 'CNA',
+        workload: '9 módulos',
+        course: 'Basic, Intermediate, Advanced and High Advanced'
+      }
+    ],
+    professionalExperience: [
+      {
+        dateFrom: '13/04/2009',
+        dateTo: '27/07/2018',
+        company: 'Viewit Comércio e Técnologia LTDA',
+        position: 'Analista de TI Pleno',
+        description: [
+          '<b>Atualmente -</b> Desenvolvimento de novos projetos em NodeJs com Angular6, manutenção dos projetos existentes em Java ou Nativos. Gerenciamento dos servidores na Amazon AWS',
+          '<b>Até 2013 -</b> Desenvolvimento de aplicativos para Android (Java), Iphone (Objective-C), Web Mobile (HTML, CSS, JQuery). Desenvolvimento do site da empresa (PHP, XHTML). Plataformas de comércio eletrônico (VTEX e Magento). Aplicativos na AppStore (Onofre, John John Denim, Lelis Blanc, By Tennis), no Google Play (Onofre)',
+          '<b>Até 12/2011 -</b> Instalação e gerenciamento de infraestrutura para provedor (Hosting de Exchange 2007 e 2010, Zimbra, Postfix, BES, Web com Plesk, Sharepoint, DNS, VMWare, etc). Desenvolvimento de painel de controle do provedor (PHP), webservices de integração (C#), MTA para gerenciamento de e-mail e anti-span (JAVA)'
+        ]
+      },
+      {
+        dateFrom: '29/03/2004',
+        dateTo: '26/03/2009',
+        company: 'Ventiladores Bernauer S.A.',
+        position: 'Analista de Sistemas e Administrador de Redes',
+        description: [
+          'Desenvolvimento de sistemas para uso interno em diversas áreas (PCP, Vendas, Engenharia, Almoxarifado, etc), integração com sistemas de terceiros (ERP - RM), levantamento das necessidades dos usuários, modelagem de dados. Principais ferramentas: Delphi 7, Sql Server 2000, Postgre, DBF, Rave Report, FastCube, etc.',
+          'Implantação, manutenção e gerenciamento dos servidores (SBS 2003 com Exchange 2003, SQL Server 2000, WSUS, NTBackup. Windows 2003 com Terminal Service. Slackware como servidor de arquivos com SAMBA integrado com o AD do SBS 2003. Slackware como firewall utilizando IPTABLES, SQUID, SARG, OPENVPN). RAID em linux e Windows.'
+        ]
+      },
+      {
+        dateFrom: '18/08/2003',
+        dateTo: '31/12/2003',
+        company: 'Home Doctor',
+        position: 'Suporte Técnico (Estagiário)',
+        description: ['Suporte interno aos usuários, instalação e configuração de computadores com Windows NT, 2000 e XP, configuração de rede, acessos e restrições de usuários, rotinas de backup, etc.']
+      },
+      {
+        dateFrom: '17/06/2003',
+        dateTo: '30/07/2003',
+        company: 'Bohm Interal',
+        position: 'Analista Programador (Estagiário)',
+        description: ['Desenvolvimento de programa de CRM na linguagem Delphi, com banco de dados Oracle, utilizando SQL e PL/SQL. ']
+      }
+    ]
+  };
+}
