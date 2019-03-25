@@ -2,19 +2,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { DataGroupComponent } from './data-group/data-group.component';
-import { CourseGroupComponent } from './course-group/course-group.component';
-import { ExperienceGroupComponent } from './experience-group/experience-group.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ResumeModule } from './resume/resume.module';
+import { Resume2Module } from './resume2/resume2.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DataGroupComponent,
-    CourseGroupComponent,
-    ExperienceGroupComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    ResumeModule,
+    Resume2Module
   ],
   providers: [],
   bootstrap: [AppComponent]
