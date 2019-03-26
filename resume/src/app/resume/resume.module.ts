@@ -14,7 +14,7 @@ import { ExperienceGroupComponent } from "./experience-group/experience-group.co
         ExperienceGroupComponent
     ],
     imports: [
-        CommonModule
+        CommonModule,
     ],
     exports: [
         ResumeComponent

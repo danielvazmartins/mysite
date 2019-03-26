@@ -1,0 +1,45 @@
+{
+    "name": "string",
+    "occupation": "string",
+    "dateOfBirth": "date",
+    "address": {
+        "line1": "string",
+        "line2": "string"
+    },
+    "mobile": "string",
+    "email": "string",
+    "skills": [{
+        "type": "string",
+        "skills": ["string"]
+    }],
+    "aboutMe": "string",
+    "professionalGoals": "string",
+    "academicQualifications": [{
+        "dateConclusion": "string",
+        "institution": "string",
+        "course": "string"
+    }],
+    "certifications": [{
+        "dateConclusion": "date",
+        "institution": "string",
+        "course": "string"
+    }],
+    "technicalQualifications": [{
+        "dateConclusion": "date",
+        "institution": "string",
+        "course": "string"
+    }],
+    "extraCourses": [{
+        "dateConclusion": "date",
+        "institution": "string",
+        "workload": "string",
+        "course": "string"
+    }],
+    "professionalExperience": [{
+        "dateFrom": "date",
+        "dateTo": "date",
+        "company": "string",
+        "position": "string",
+        "description": ["string"]
+    }]
+}

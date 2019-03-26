@@ -8,11 +8,20 @@ ng new
 ng new myapp --style=scss --skip-tests --skip-git
 
 # Publicar em produção
+```bash
+# Entrar no diretorio do projeto angular
 ng build --aot
-scp -r dist/www/ srv-digitalocean:/tmp
-- No servidor copiar oconteúdo
+# Copiar o conteúdo compilado para o servidor
+scp -r dist/PROJETO srv-digitalocean:/tmp
+scp -r -i ...\projetos\digitalocean\keys\digitalocean-rsa-private.key .\resume\ root@206.189.67.178:/tmp
+# Acessar o servidor via SSH e atualizar o conteúdo novo
 rm -rf /usr/local/apps/mysite/resume/*
 mv /tmp/www/* /usr/local/apps/mysite/resume
+# Reiniciar o docker do nginx
+docker stop proxy-nginx
+cd /usr/local/apps/digitalocean/
+docker-compose up -d
+```
 
 # Google Analytics
 https://analytics.google.com/analytics/web

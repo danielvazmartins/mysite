@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
 import { ResumeService } from "../shared/services/resume.service";
+import { ActivatedRoute, ActivatedRouteSnapshot } from "@angular/router";
 
 @Component({
     selector: 'app-resume',
@@ -9,12 +10,16 @@ import { ResumeService } from "../shared/services/resume.service";
 })
 export class ResumeComponent implements OnInit {
     resume: any
+    resumeName: string
 
     constructor(
-        private resumeService: ResumeService
+        private resumeService: ResumeService,
+        private route: ActivatedRoute
     ) {}
 
     ngOnInit() {
-        this.resume = this.resumeService.getResume('daniel')
+        this.resumeName = this.route.snapshot.queryParams.name || 'daniel'
+
+        this.resume = this.resumeService.getResume(this.resumeName)
     }
 }

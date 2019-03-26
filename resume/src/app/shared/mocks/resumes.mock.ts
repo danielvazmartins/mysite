@@ -228,13 +228,16 @@ export const resumesMock = {
     },
     rozana: {
         name: 'Rozana de Aquino Santos',
-        occupation: 'Analista / Desenvolvedor de Sistemas',
-        dateOfBirth: '17/08/1983',
         address: {
-            line1: 'Av. Vila Ema, 3793 ap 103C',
-            line2: 'Cep 03281-001 - São Paulo-SP'
+            line1: "Rua da Paz, 2150 - Chácara Santo Antônio",
+            line2: "Cep 04713-002"
         },
-        mobile: '(11) 96450-0218',
-        email: 'danielvazmartins@gmail.com'
+        mobile: "(11) 96353-7087",
+        email: "rozanaaquino1@gmail.com",
+        academicQualifications: [{
+            dateConclusion: "2014",
+            institution: "Universidade Nove de Julho - UNINOVE - SP",
+            course: "Bacharel em Administração de Empresas Social"
+        }]
     }
 }
