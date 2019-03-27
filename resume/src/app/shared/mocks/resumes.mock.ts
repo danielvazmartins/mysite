@@ -234,10 +234,96 @@ export const resumesMock = {
         },
         mobile: "(11) 96353-7087",
         email: "rozanaaquino1@gmail.com",
+        skills: [{
+            type: "Idiomas",
+            skills: ["Inglês Intermediário"]
+        }],
+        aboutMe: "Profissional formada em Administração de Empresas com elevado espírito de equipe e capacidade de adaptação a ambientes multiculturais. Ampla experiência em: atendimento ao cliente, organização de arquivos, implementação de banco de dados, domínio do pacote Office e rotinas administrativas em geral. Experiência em suporte a diretoria, controle e organização de agendas e compromissos executivos. Experiência profissional adquirida no decorrer de 10 anos nos departamentos: administrativo, financeiro, comercial e secretariado. Capacidade de gestão de problemas e soluções, atuando sempre com profissionalismo, transparência, ética e sobretudo eficácia para atingir melhores resultados e atender as necessidades da empresa.",
+        professionalGoals: "Atuar na área administrativa e ou financeira.",
         academicQualifications: [{
             dateConclusion: "2014",
             institution: "Universidade Nove de Julho - UNINOVE - SP",
             course: "Bacharel em Administração de Empresas Social"
+        }],
+        professionalExperience: [{
+            dateFrom: "Jan/2017",
+            dateTo: "Mar/2018",
+            company: "Edgar Ribeiro - Consultoria Financeira e Contábil",
+            position: "Auxiliar Administrativa",
+            description: [
+                "Recepção de clientes",
+                "Fluxo de caixa",
+                "Lançamento de notas fiscais",
+                "Conferência de notas fiscais",
+                "Pagamentos financeiros",
+                "Despacho e conferência de documentos",
+                "Organização de arquivos e elaboração de relatórios"]
+        }, {
+            dateFrom: "Nov/2015",
+            dateTo: "Jan/2017",
+            company: "Morumbi Car Center - Automecânica",
+            position: "Assistente Administrativa",
+            description: [
+                "Atendimento ao cliente",
+                "Elaboração de relatórios financeiros",
+                "Fluxo de caixa",
+                "Contas á pagar",
+                "Cobrança de clientes inadimplentes",
+                "Captação de clientes",
+                "Compras",
+                "Contato com fornecedores",
+                "Organização de arquivos e rotinas administrativas em geral"]
+        }, {
+            dateFrom: "Nov/2014",
+            dateTo: "Jul/2015",
+            company: "Cenário 8 - Salão de Beleza & Spa",
+            position: "Auxiliar Administrativa",
+            description: [
+                "Atendimento ao cliente",
+                "Organização de arquivos e dados de clientes",
+                "Elaboração de planilhas financeira",
+                "Responsável por pagamentos financeiros e contas a pagar",
+                "Responsável pelo gerenciamento e atualizações do site da empresa"]
+        }, {
+            dateFrom: "Nov/2013",
+            dateTo: "Mar/2014",
+            company: "Tecnisa Construtora",
+            position: "Secretária",
+            description: [
+                "Recepção de clientes",
+                "Controle da agenda e dos compromissos do executivo e diretoria",
+                "Agendamento de reuniões",
+                "Atendimento e apoio a clientes internos e externos",
+                "Organização e reservas das salas de reuniões",
+                "Planejamento e reservas de viagens executivas",
+                "Despacho e conferência de documentos e malotes"
+            ]
+        }, {
+            dateFrom: "Nov/2012",
+            dateTo: "Out/2013",
+            company: "CIEE - Centro de Integração Empresa Escola",
+            position: "Recepcionista",
+            description: [
+                "Atendimento ao estudante",
+                "Contato com empresas e intituições educacionais",
+                "Emissões de contratos",
+                "Análise Estudantil",
+                "Elaboração de planilhas e relatórios",
+                "Suporte e apoio aos gestores das intituições e contratantes"]
+        }, {
+            dateFrom: "Fev/2007",
+            dateTo: "Ago/2012",
+            company: "WES Studio - Salão de Beleza & Spa",
+            position: "Assistente Administrativa",
+            description: [
+                "Atendimento a clientes e fornecedores",
+                "Fluxo de caixa",
+                "Balancetes financeiros",
+                "Compras",
+                "Cobrança de clientes inadimplentes",
+                "Conciliação bancária",
+                "Contas a pagar e á receber"
+            ]
         }]
     }
 }
