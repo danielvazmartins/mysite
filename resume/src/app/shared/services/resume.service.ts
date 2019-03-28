@@ -6,7 +6,7 @@ import { resumesMock } from "../mocks/resumes.mock";
     providedIn: 'root'
 })
 export class ResumeService {
-    getResume(name: string) {
-        return resumesMock[name]
+    getResume(id: number) {
+        return resumesMock.resumes[id]
     }
 }

@@ -7,11 +7,14 @@ import { Title } from "@angular/platform-browser";
 @Component({
     selector: 'app-resume',
     templateUrl: './resume.component.html',
-    styleUrls: ['./resume.component.scss']
+    styleUrls: [
+        './resume.component.scss',
+        './styles/pink-style.scss'
+    ]
 })
 export class ResumeComponent implements OnInit {
     resume: any
-    resumeName: string
+    styleName: string
 
     constructor(
         private resumeService: ResumeService,
@@ -20,9 +23,13 @@ export class ResumeComponent implements OnInit {
     ) {}
 
     ngOnInit() {
-        this.resumeName = this.route.snapshot.queryParams.name || 'daniel'
+        // Pega os parâmetro da URL
+        const resumeId = this.route.snapshot.queryParams.resumeId || 0
+        this.styleName = this.route.snapshot.queryParams.style
 
-        this.resume = this.resumeService.getResume(this.resumeName)
+        // Carrega os dados do currículo
+        this.resume = this.resumeService.getResume(resumeId)
+        // Altera o title do navegador
         this.titleService.setTitle(this.resume.name)
     }
 }
