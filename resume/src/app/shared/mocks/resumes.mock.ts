@@ -2,6 +2,7 @@ export const resumesMock = {
     resumes: [
         {
             name: 'Daniel Vaz Villalobos Martins',
+            foto: '/assets/foto-perfil.png',
             occupation: 'Analista / Desenvolvedor de Sistemas',
             dateOfBirth: '17/08/1983',
             address: {
@@ -228,6 +229,7 @@ export const resumesMock = {
             ]
         }, {
             name: 'Rozana de Aquino Santos',
+            foto: '/assets/foto-perfil-rozana.jpg',
             address: {
                 line1: "Rua da Paz, 2150 - Chácara Santo Antônio",
                 line2: "Cep 04713-002"

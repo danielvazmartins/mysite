@@ -1,5 +1,6 @@
 {
     "name": "string",
+    "foto": "string",
     "occupation": "string",
     "dateOfBirth": "date",
     "address": {
