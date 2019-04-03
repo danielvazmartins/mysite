@@ -5,7 +5,7 @@
     </div>
     <div class="box-resume">
       <div class="sidebar">
-          <div class="perfil"></div>
+          <!-- <div class="perfil"></div> -->
           <div class="perfil-img">
             <img [src]="resume.foto">
           </div>
@@ -35,8 +35,8 @@
                 <h3 class="sub-title" *ngIf="resume.technicalQualifications">Formação Técnica</h3>
                 <app-course-group  *ngFor="let course of resume.technicalQualifications" title="{{course.dateConclusion}} - {{course.institution}}" [data]="course.course"></app-course-group>
             </div>
-            <div class="col">
-                <h3 class="sub-title" *ngIf="resume.extraCourses">Formação Extra Curricular</h3>
+            <div class="col" *ngIf="resume.extraCourses">
+                <h3 class="sub-title">Formação Extra Curricular</h3>
                 <app-course-group  *ngFor="let course of resume.extraCourses" title="{{course.dateConclusion}} - {{course.institution}} ({{course.workload}})" [data]="course.course"></app-course-group>
             </div>
           </div>
