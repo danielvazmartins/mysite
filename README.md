@@ -10,7 +10,7 @@ ng new myapp --style=scss --skip-tests --skip-git
 # Publicar em produção
 ```bash
 # Entrar no diretorio do projeto angular
-ng build --aot
+ng build --prod
 # Copiar o conteúdo compilado para o servidor
 scp -r dist/PROJETO srv-digitalocean:/tmp
 scp -r -i ...\projetos\digitalocean\keys\digitalocean-rsa-private.key .\dist\resume\ root@206.189.67.178:/tmp
