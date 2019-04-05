@@ -1,7 +1,20 @@
 .style.pink {
+    background: #f06292;
+
     .header {
         background: #f48fb1;
         color: #e91e63;
         border-bottom: 3px solid #880e4f;
+    }
+
+    .box-resume {
+
+        .sidebar {
+            background: linear-gradient(#ad1457, #880e4f);
+        }
+    }
+
+    .main-content {
+        background: #fce4ec;
     }
 }

@@ -9,6 +9,7 @@ import { Title } from "@angular/platform-browser";
     templateUrl: './resume.component.html',
     styleUrls: [
         './resume.component.scss',
+        './styles/brown-style.scss',
         './styles/pink-style.scss'
     ]
 })
@@ -25,7 +26,7 @@ export class ResumeComponent implements OnInit {
     ngOnInit() {
         // Pega os parâmetro da URL
         const resumeId = this.route.snapshot.queryParams.resumeId || 0
-        this.styleName = this.route.snapshot.queryParams.style
+        this.styleName = this.route.snapshot.queryParams.style || 'brown'
 
         // Carrega os dados do currículo
         this.resume = this.resumeService.getResume(resumeId)
