@@ -1,10 +1,15 @@
+// Cores
+$header-bg: #f48fb1;
+$header-font: #e91e63;
+$header-border: #880e4f;
+
 .style.pink {
     background: #f06292;
 
     .header {
-        background: #f48fb1;
-        color: #e91e63;
-        border-bottom: 3px solid #880e4f;
+        background: $header-bg;
+        color: $header-font;
+        border-bottom: 3px solid $header-border;
     }
 
     .box-resume {
