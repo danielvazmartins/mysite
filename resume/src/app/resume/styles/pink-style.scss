@@ -21,5 +21,10 @@ $header-border: #880e4f;
 
     .main-content {
         background: #fce4ec;
+
+        .sub-title {
+            color: $header-font;
+            border-bottom: 1px solid $header-font;
+        }
     }
 }
