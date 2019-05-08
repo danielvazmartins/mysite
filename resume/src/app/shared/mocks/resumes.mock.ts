@@ -234,14 +234,13 @@ export const resumesMock = {
                 line1: "Rua da Paz, 2150 - Chácara Santo Antônio",
                 line2: "Cep 04713-002"
             },
-            mobile: "(11) 96353-7087",
+            mobile: "(11) 96353-7087 / (11) 95787-5649",
             email: "rozanaaquino1@gmail.com",
             skills: [{
                 type: "Idiomas",
                 skills: ["Inglês Intermediário"]
             }],
-            //aboutMe: "Profissional formada em Administração de Empresas com elevado espírito de equipe e capacidade de adaptação a ambientes multiculturais. Ampla experiência em: atendimento ao cliente, organização de arquivos, implementação de banco de dados, domínio do pacote Office e rotinas administrativas em geral. Experiência em suporte a diretoria, controle e organização de agendas e compromissos executivos. Experiência profissional adquirida no decorrer de 10 anos nos departamentos: administrativo, financeiro, comercial e secretariado. Capacidade de gestão de problemas e soluções, atuando sempre com profissionalismo, transparência, ética e sobretudo eficácia para atingir melhores resultados e atender as necessidades da empresa.",
-            aboutMe: "Profissional graduada em Administração de Empresas com elevado espírito de equipe e capacidade em adaptaçāo a ambientes multicuturais. Experiência Profissional adquirida no decorrer de 10 anos nos departamentos Aministrativo, Financeiro, Comercial e Secretariado. Ampla experiência em Atendimento ao cliente interno e externo, Organizaçāo de arquivos, Implementação de dados, domínio no pacote office e rotinas administrativas em geral. Experiência em suporte e apoio a diretoria, organização de agendas e compromissos executivos, planejamento de viagens executidas, dentre outras atividades pertinentes a este cargo. Capacidade de gestão de problemas e soluções atuando sempre",
+            aboutMe: "Profissional graduada em Administração de Empresas com elevado espírito de equipe e capacidade em adaptaçāo a ambientes multicuturais. Experiência Profissional adquirida no decorrer de 10 anos nos departamentos Aministrativo, Financeiro, Comercial e Secretariado. Ampla experiência em Atendimento ao cliente interno e externo, Organizaçāo de arquivos, Implementação de dados, domínio no pacote office e rotinas administrativas em geral. Experiência em suporte e apoio a diretoria, organização de agendas e compromissos executivos, planejamento de viagens executidas, dentre outras atividades pertinentes a este cargo. Capacidade de gestão de problemas e soluções atuando sempre com profissionalismo, transparência, ética e sobretudo eficácia para atingir melhores resultados e atender as necesidades da Empresa. Busco sempre informações que me agreguem conhecimentos e aprimorem minhas habilidades profissionais; tenho como objetivo dar continuidade a meus estudos e alcançar o nível C2 de fluência no inglês.",
             professionalGoals: "Atuar na área administrativa e ou financeira.",
             academicQualifications: [{
                 dateConclusion: "2014",
@@ -249,6 +248,26 @@ export const resumesMock = {
                 course: "Bacharel em Administração de Empresas Social"
             }],
             professionalExperience: [{
+                dateFrom: "Nov/2017",
+                dateTo: "Atual",
+                company: "Museu do Futebol",
+                position: "Atendimento ao Client / Monitoria",
+                description: []
+            }, {
+                dateFrom: "Jun/2018",
+                dateTo: "Dez/2018",
+                company: "Cenário 8 - Salão de Beleza & Spa",
+                position: "Gerenciamento",
+                description: [
+                    "Atendimento ao cliente",
+                    "Atendimento aos fornecedores",
+                    "Controle de agendas e agendamentos",
+                    "Controle e supervisão de estoque",
+                    "Compras",
+                    "Folha de Pagamentos",
+                    "Parcerias",
+                    "Supervisão e alimentação de websites(divulgações, promoções, anúncios, marketing)"]
+            }, {
                 dateFrom: "Jan/2017",
                 dateTo: "Mar/2018",
                 company: "Edgar Ribeiro - Consultoria Financeira e Contábil",
