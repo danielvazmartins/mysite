@@ -10,6 +10,7 @@ export class ExperienceGroupComponent implements OnInit {
   @Input() dateFrom: string
   @Input() dateTo: string
   @Input() title: string
+  @Input() subTitle: string
   @Input() data: string
   @Input() dataLines: string[]
 

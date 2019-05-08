@@ -42,7 +42,7 @@
           </div>
           <div class="row">
               <h3 class="sub-title" *ngIf="resume.professionalExperience">Experiência Profissional</h3>
-              <app-experience-group *ngFor="let job of resume.professionalExperience" [dateFrom]="job.dateFrom" [dateTo]="job.dateTo" [title]="job.company" [dataLines]="job.description"></app-experience-group>
+              <app-experience-group *ngFor="let job of resume.professionalExperience" [dateFrom]="job.dateFrom" [dateTo]="job.dateTo" [title]="job.company" [subTitle]="job.position" [dataLines]="job.description"></app-experience-group>
           </div>
         </div>
     </div>
