@@ -235,7 +235,7 @@ export const resumesMock = {
                 line2: "Cep 04713-002"
             },
             mobile: "(11) 96353-7087",
-            mobile2: "(11) 95787-5649 (whatsapp)",
+            mobile2: "(11) 95786-5649 (whatsapp)",
             email: "rozanaaquino1@gmail.com",
             skills: [{
                 type: "Idiomas",
