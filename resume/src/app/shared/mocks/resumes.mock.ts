@@ -2,7 +2,7 @@ export const resumesMock = {
     resumes: [
         {
             name: 'Daniel Vaz Villalobos Martins',
-            foto: '/assets/foto-perfil.png',
+            foto: '/assets/foto-perfil.jpg',
             occupation: 'Analista / Desenvolvedor de Sistemas',
             dateOfBirth: '17/08/1983',
             address: {
@@ -234,7 +234,8 @@ export const resumesMock = {
                 line1: "Rua da Paz, 2150 - Chácara Santo Antônio",
                 line2: "Cep 04713-002"
             },
-            mobile: "(11) 96353-7087 / (11) 95787-5649",
+            mobile: "(11) 96353-7087",
+            mobile2: "(11) 95787-5649 (whatsapp)",
             email: "rozanaaquino1@gmail.com",
             skills: [{
                 type: "Idiomas",
@@ -252,7 +253,11 @@ export const resumesMock = {
                 dateTo: "Atual",
                 company: "Museu do Futebol",
                 position: "Atendimento ao Client / Monitoria",
-                description: []
+                description: [
+                    "Atendimento ao visitante",
+                    "Suporte e orientação para o visitante ao Museu",
+                    "Vendas de ingressos",
+                    "Controle de planilhas de fechamento diário"]
             }, {
                 dateFrom: "Jun/2018",
                 dateTo: "Dez/2018",

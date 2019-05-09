@@ -7,8 +7,8 @@
     </ng-container>
   </div>
   <div class="col right">
-      <label>{{title}}</label>
-      <span>{{subTitle}}</span>
+      <label class="title">{{title}}</label>
+      <label class="sub-title">{{subTitle}}</label>
       <span [innerHTML]="data"></span>
       <span *ngFor="let line of dataLines" [innerHTML]="line"></span>
   </div>

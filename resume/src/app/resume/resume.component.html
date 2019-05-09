@@ -5,13 +5,12 @@
     </div>
     <div class="box-resume">
       <div class="sidebar">
-          <!-- <div class="perfil"></div> -->
           <div class="perfil-img">
             <img [src]="resume.foto">
           </div>
           <app-data-group *ngIf="resume.dateOfBirth" title="Data de nascimento" [data]="resume.dateOfBirth"></app-data-group>
           <app-data-group *ngIf="resume.address" title="Endereço" [dataLines]="[resume.address.line1, resume.address.line2]"></app-data-group>
-          <app-data-group *ngIf="resume.mobile || resume.email" title="Contato" [dataLines]="[resume.mobile, resume.email]"></app-data-group>
+          <app-data-group *ngIf="resume.mobile || resume.email" title="Contato" [dataLines]="[resume.mobile, resume.mobile2, resume.email]"></app-data-group>
           <div class="box-skills" *ngIf="resume.skills">
               <h3>Qualificações</h3>
               <app-data-group *ngFor="let skill of resume.skills" [title]="skill.type" [dataWords]="skill.skills"></app-data-group>

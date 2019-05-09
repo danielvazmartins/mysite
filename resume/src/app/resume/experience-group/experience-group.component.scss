@@ -23,7 +23,16 @@
 
     label {
         display: block;
-        color: #EF8A40;              
+        color: #EF8A40;
+        
+        &.title {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        &.sub-title {
+            margin-bottom: 5px;
+        }
     }
     span {
         display: block;
