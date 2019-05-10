@@ -255,7 +255,7 @@ export const resumesMock = {
                 position: "Atendimento ao Client / Monitoria",
                 description: [
                     "Atendimento ao visitante",
-                    "Suporte e orientação para o visitante ao Museu",
+                    "Suporte e orientação ao visitante no Museu",
                     "Vendas de ingressos",
                     "Controle de planilhas de fechamento diário"]
             }, {

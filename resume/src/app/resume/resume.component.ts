@@ -10,7 +10,8 @@ import { Title } from "@angular/platform-browser";
     styleUrls: [
         './resume.component.scss',
         './styles/brown-style.scss',
-        './styles/pink-style.scss'
+        './styles/pink-style.scss',
+        './styles/gray-style.scss'
     ]
 })
 export class ResumeComponent implements OnInit {
