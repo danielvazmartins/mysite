@@ -231,8 +231,8 @@ export const resumesMock = {
             name: 'Rozana de Aquino Santos',
             foto: '/assets/foto-perfil-rozana.jpg',
             address: {
-                line1: "Rua da Paz, 2150 - Chácara Santo Antônio",
-                line2: "Cep 04713-002"
+                line1: "Rua Professor Augusto Monjardino, 36 Kit 27 - Rio Pequeno - SP",
+                line2: "Cep 05361-060"
             },
             mobile: "(11) 96353-7087",
             mobile2: "(11) 95786-5649 (whatsapp)",
@@ -252,7 +252,7 @@ export const resumesMock = {
                 dateFrom: "Nov/2017",
                 dateTo: "Atual",
                 company: "Museu do Futebol",
-                position: "Atendimento ao Client / Monitoria",
+                position: "Atendimento ao Cliente / Monitoria",
                 description: [
                     "Atendimento ao visitante",
                     "Suporte e orientação ao visitante no Museu",
