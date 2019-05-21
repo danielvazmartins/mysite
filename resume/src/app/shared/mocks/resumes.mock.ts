@@ -5,10 +5,10 @@ export const resumesMock = {
             foto: '/assets/foto-perfil.jpg',
             occupation: 'Analista / Desenvolvedor de Sistemas',
             dateOfBirth: '17/08/1983',
-            address: {
-                line1: 'Av. Vila Ema, 3793 ap 103C',
-                line2: 'Cep 03281-001 - São Paulo-SP'
-            },
+            address: [
+                'Av. Vila Ema, 3793 ap 103C',
+                'Cep 03281-001 - São Paulo-SP'
+            ],
             mobile: '(11) 96450-0218',
             email: 'danielvazmartins@gmail.com',
             skills: [{
@@ -230,10 +230,11 @@ export const resumesMock = {
         }, {
             name: 'Rozana de Aquino Santos',
             foto: '/assets/foto-perfil-rozana.jpg',
-            address: {
-                line1: "Rua Professor Augusto Monjardino, 36 Kit 27 - Rio Pequeno - SP",
-                line2: "Cep 05361-060"
-            },
+            address: [
+                "Rua Prof. Augusto Monjardino, 36 ap 27",
+                "Rio Pequeno - São Paulo - SP",
+                "Cep 05361-060"
+            ],
             mobile: "(11) 96353-7087",
             mobile2: "(11) 95786-5649 (whatsapp)",
             email: "rozanaaquino1@gmail.com",
