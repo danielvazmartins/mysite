@@ -242,7 +242,7 @@ export const resumesMock = {
                 type: "Idiomas",
                 skills: ["Inglês Intermediário"]
             }],
-            aboutMe: "Profissional graduada em Administração de Empresas com elevado espírito de equipe e capacidade em adaptaçāo a ambientes multicuturais. Experiência Profissional adquirida no decorrer de 10 anos nos departamentos Aministrativo, Financeiro, Comercial e Secretariado. Ampla experiência em Atendimento ao cliente interno e externo, Organizaçāo de arquivos, Implementação de dados, domínio no pacote office e rotinas administrativas em geral. Experiência em suporte e apoio a diretoria, organização de agendas e compromissos executivos, planejamento de viagens executidas, dentre outras atividades pertinentes a este cargo. Capacidade de gestão de problemas e soluções atuando sempre com profissionalismo, transparência, ética e sobretudo eficácia para atingir melhores resultados e atender as necesidades da Empresa. Busco sempre informações que me agreguem conhecimentos e aprimorem minhas habilidades profissionais; tenho como objetivo dar continuidade a meus estudos e alcançar o nível C2 de fluência no inglês.",
+            aboutMe: "Profissional graduada em Administração de Empresas com elevado espírito de equipe e capacidade em adaptaçāo a ambientes multicuturais. Experiência Profissional adquirida no decorrer de 10 anos nos departamentos Administrativo, Financeiro, Comercial e Secretariado. Ampla experiência em Atendimento ao cliente interno e externo, Organizaçāo de arquivos, Implementação de dados, domínio no pacote office e rotinas administrativas em geral. Experiência em suporte e apoio a diretoria, organização de agendas e compromissos executivos, planejamento de viagens executidas, dentre outras atividades pertinentes a este cargo. Capacidade de gestão de problemas e soluções atuando sempre com profissionalismo, transparência, ética e sobretudo eficácia para atingir melhores resultados e atender as necesidades da Empresa. Busco sempre informações que me agreguem conhecimentos e aprimorem minhas habilidades profissionais; tenho como objetivo dar continuidade a meus estudos e alcançar o nível C2 de fluência no inglês.",
             professionalGoals: "Atuar na área administrativa e ou financeira.",
             academicQualifications: [{
                 dateConclusion: "2014",
@@ -277,7 +277,7 @@ export const resumesMock = {
                 dateFrom: "Jan/2017",
                 dateTo: "Mar/2018",
                 company: "Edgar Ribeiro - Consultoria Financeira e Contábil",
-                position: "Auxiliar Administrativa",
+                position: "Auxiliar Administrativo",
                 description: [
                     "Recepção de clientes",
                     "Fluxo de caixa",
@@ -290,7 +290,7 @@ export const resumesMock = {
                 dateFrom: "Nov/2015",
                 dateTo: "Jan/2017",
                 company: "Morumbi Car Center - Automecânica",
-                position: "Assistente Administrativa",
+                position: "Assistente Administrativo",
                 description: [
                     "Atendimento ao cliente",
                     "Elaboração de relatórios financeiros",
@@ -305,7 +305,7 @@ export const resumesMock = {
                 dateFrom: "Nov/2014",
                 dateTo: "Jul/2015",
                 company: "Cenário 8 - Salão de Beleza & Spa",
-                position: "Auxiliar Administrativa",
+                position: "Auxiliar Administrativo",
                 description: [
                     "Atendimento ao cliente",
                     "Organização de arquivos e dados de clientes",
@@ -333,7 +333,7 @@ export const resumesMock = {
                 position: "Recepcionista",
                 description: [
                     "Atendimento ao estudante",
-                    "Contato com empresas e intituições educacionais",
+                    "Contato com empresas e instituições educacionais",
                     "Emissões de contratos",
                     "Análise Estudantil",
                     "Elaboração de planilhas e relatórios",
@@ -342,7 +342,7 @@ export const resumesMock = {
                 dateFrom: "Fev/2007",
                 dateTo: "Ago/2012",
                 company: "WES Studio - Salão de Beleza & Spa",
-                position: "Assistente Administrativa",
+                position: "Assistente Administrativo",
                 description: [
                     "Atendimento a clientes e fornecedores",
                     "Fluxo de caixa",
