@@ -35,5 +35,7 @@ export class ResumeComponent implements OnInit {
         this.resume = this.resumeService.getResume(resumeId)
         // Altera o title do navegador
         this.titleService.setTitle(this.resume.name)
+
+        this.resumeService.getAllResumes()
     }
 }
