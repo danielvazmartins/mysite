@@ -50,6 +50,14 @@ $text-color: #ec407a;
             color: $subtitle-color;
             border-bottom: 1px solid $subtitle-color;
         }
+
+        .row-flex {
+            .col {
+                &:nth-child(2) {
+                    border-left: 3px solid $subtitle-color;
+                }
+            }
+        }
     }
 
     /deep/ app-data-group {

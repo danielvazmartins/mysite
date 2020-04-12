@@ -249,6 +249,42 @@ export const resumesMock = {
                 institution: "Universidade Nove de Julho - UNINOVE - SP",
                 course: "Bacharel em Administração de Empresas Social"
             }],
+            extraCourses: [{
+                dateConclusion: '04/2020',
+                institution: 'Sebrae',
+                workload: '03 horas',
+                course: 'Negociação'
+            }, {
+                dateConclusion: '04/2020',
+                institution: 'Sebrae',
+                workload: '08 horas',
+                course: 'Gestão de Pessoas'
+            }, {
+                dateConclusion: '04/2020',
+                institution: 'Sebrae',
+                workload: '03 horas',
+                course: 'Gestão Financeira'
+            },{
+                dateConclusion: '04/2020',
+                institution: 'Sebrae',
+                workload: '02 horas',
+                course: 'Marketing Digital para o Empreendedor'
+            }/*, {
+                dateConclusion: 'xx/2020',
+                institution: 'Udemy',
+                workload: 'xx horas',
+                course: 'Mercados Financeiros e Investimentos'
+            }, {
+                dateConclusion: 'xx/2020',
+                institution: 'Udemy',
+                workload: 'xx horas',
+                course: 'Empreendedorismo; Negócios e Startups na Prática'
+            }, {
+                dateConclusion: 'xx/2020',
+                institution: 'Udemy',
+                workload: 'xx horas',
+                course: 'Planejamento e Gestão de Projetos'
+            }*/],
             professionalExperience: [{
                 dateFrom: "Nov/2017",
                 dateTo: "Atual",

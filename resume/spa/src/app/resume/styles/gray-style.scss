@@ -49,6 +49,14 @@ $text-color: #424242;
             color: $subtitle-color;
             border-bottom: 1px solid $subtitle-color;
         }
+
+        .row-flex {
+            .col {
+                &:nth-child(2) {
+                    border-left: 3px solid $subtitle-color;
+                }
+            }
+        }
     }
 
     /deep/ app-data-group {
@@ -60,7 +68,8 @@ $text-color: #424242;
 
     /deep/ app-course-group {
         label {
-            color: $subtitle-color;
+            font-weight: bold;
+            color: $header-font;
         }
     }
 
@@ -71,7 +80,7 @@ $text-color: #424242;
             &.sub-title {
                 font-weight: bold;
                 border-bottom: 1px solid #263238;
-                color: #546e7a !important;
+                color: $header-font !important;
             }
         }
     }
