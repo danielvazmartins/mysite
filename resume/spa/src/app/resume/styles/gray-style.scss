@@ -59,21 +59,21 @@ $text-color: #424242;
         }
     }
 
-    /deep/ app-data-group {
+    ::ng-deep app-data-group {
         label {
             color: $subtitle-color;
             font-weight: bold;
         }
     }
 
-    /deep/ app-course-group {
+    ::ng-deep app-course-group {
         label {
             font-weight: bold;
             color: $header-font;
         }
     }
 
-    /deep/ app-experience-group {
+    ::ng-deep app-experience-group {
         label {
             color: $subtitle-color;
     

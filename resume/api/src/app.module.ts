@@ -1,16 +1,24 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { ResumeModule } from './resume/resume.module';
+import * as config from 'config';
+
+import { UsersModule } from './users/users.module';
+import { AuthModule } from './auth/auth.module';
+import { ResumesModule } from './resumes/resumes.module';
+
+const mongobConnection = config.get<string>('database.connection')
 
 @Module({
     imports: [
-        MongooseModule.forRoot('mongodb://localhost/resume'),
-        ResumeModule
-    ],
-    controllers: [AppController],
-    providers: [AppService],
+        MongooseModule.forRoot(mongobConnection, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useCreateIndex: true
+        }),
+        UsersModule,
+        AuthModule,
+        ResumesModule
+    ]
 })
 export class AppModule {}

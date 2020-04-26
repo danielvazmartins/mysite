@@ -60,19 +60,19 @@ $text-color: #ec407a;
         }
     }
 
-    /deep/ app-data-group {
+    ::ng-deep app-data-group {
         label {
             color: #f48fe2;
         }
     }
 
-    /deep/ app-course-group {
+    ::ng-deep app-course-group {
         label {
             color: $subtitle-color;
         }
     }
 
-    /deep/ app-experience-group {
+    ::ng-deep app-experience-group {
         label {
             color: $subtitle-color;
         }
