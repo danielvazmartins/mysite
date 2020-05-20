@@ -1,0 +1,38 @@
+:host {    
+    .popup {
+        .background {
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba($color: #070707, $alpha: 0.7);
+            z-index: 10;
+
+            .box {
+                width: 490px;
+                padding: 20px;
+                text-align: center;
+                background: #fff;
+                border: 3px solid #0D81FA;
+                border-radius: 25px;
+                position: relative;
+                color: #707070;
+        
+                .bt-close {
+                    width: 24px;
+                    height: 24px;
+                    background: url(/assets/images/icon-x-red.png) no-repeat;
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

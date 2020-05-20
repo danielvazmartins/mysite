@@ -1,0 +1,66 @@
+@import "../../../assets/styles/panel-colors.scss";
+
+:host {
+    display: flex;
+    justify-content: center;
+
+    .panel-content {
+        width: 500px;
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .page-box {
+            flex-direction: column;
+            margin-bottom: 40px;
+
+            .field {
+
+                label {
+                    display: block;
+                    color: $blue-primary;
+                    font-size: 20px;
+                }
+
+                span {
+                    font-size: 16px;
+                }
+            }
+
+            .bt-icon {
+                position: absolute;
+                right: -20px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                border: 2px solid #0D81FA;     
+                cursor: pointer;
+                
+                &.share {
+                    background: #fff url('/assets/images/icon-share.png') no-repeat center;
+                }
+
+                &.preview {
+                    background: #fff url('/assets/images/icon-preview.png') no-repeat center;
+                    top: 70px;
+                }
+            }
+
+            .buttons {
+                display: flex;
+                position: absolute;
+                bottom: -25px;
+                right: 125px;
+                z-index: 1;
+    
+                .bt {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

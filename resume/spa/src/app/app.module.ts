@@ -5,8 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ResumeModule } from './resume/resume.module';
-import { Resume2Module } from './resume2/resume2.module';
 import { HomeModule } from './home/home.module';
+import { PanelModule } from './panel/panel.module';
+import { AlertModule } from './shared/components/alert/alert.module';
 
 @NgModule({
   declarations: [
@@ -17,8 +18,9 @@ import { HomeModule } from './home/home.module';
     AppRoutingModule,
     HttpClientModule,
     ResumeModule,
-    Resume2Module,
-    HomeModule
+    HomeModule,
+    PanelModule,
+    AlertModule
   ],
   providers: [],
   bootstrap: [AppComponent]

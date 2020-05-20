@@ -1,0 +1,52 @@
+@import "../../../assets/styles/panel-colors.scss";
+
+:host {
+    display: flex;
+    justify-content: center;
+
+    .panel-content {
+        width: 900px;
+        padding: 10px;
+
+        form {
+            width: 100%;
+            
+            .sub-title {
+                color: $blue-primary;
+                font-size: 28px;
+                border-bottom: 2px solid $blue-primary;
+                margin-bottom: 10px;
+            }
+
+            textarea {
+                height: 100%;
+            }
+
+            .form-col.photo {
+                width: 300px;
+                flex: none;
+
+                .photo {
+                    height: 100%;
+                    background: url('/assets/images/icon-photo.png') no-repeat center;
+                    border: 1px solid $gray-dark;
+                    box-shadow: 3px 5px 3px $gray-shadow;
+                    border-radius: 8px;
+                    margin: 10px 0;
+                }
+            }
+        }
+
+        .buttons {
+            display: flex;
+            position: absolute;
+            bottom: -25px;
+            right: 125px;
+            z-index: 1;
+
+            .bt {
+                margin-left: 10px;
+            }
+        }
+    }
+}

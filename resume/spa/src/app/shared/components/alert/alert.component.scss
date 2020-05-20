@@ -1,0 +1,18 @@
+:host{
+    .content {
+
+        .title {
+            font-size: 40px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        &.error {
+            color: #C71B1B;
+        }
+
+        &.success {
+            color: #064D96;
+        }
+    }
+}

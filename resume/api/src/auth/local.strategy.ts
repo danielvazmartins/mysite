@@ -17,6 +17,6 @@ export class LocalStrategy  extends PassportStrategy(Strategy) {
     validate(username: string, password: string) {
         // Se autenticar o usuário é adicionado no objeto user da request
         return this.authService.authenticate(username, password)
-        .then(user => this.authService.getJWT(user))
+        .then(user => (user)? this.authService.getJWT(user): null)
     }
 }

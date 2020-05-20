@@ -1,0 +1,14 @@
+<section class="panel-content">
+    <h1 class="page-title">Meus Dados</h1>
+    <div class="page-box">
+        <form [formGroup]="formProfile">
+            <input type="text" name="fullName" id="fullName" placeholder="Nome Completo" formControlName="fullName">
+            <input type="email" name="email" id="email" placeholder="E-mail" formControlName="email">
+            <input type="password" name="password" id="password" placeholder="Senha" formControlName="password">
+        </form>
+        <div class="buttons">
+            <button class="bt primary" (click)="btSave()">Salvar</button>
+        </div>
+        <div class="bg"></div>
+    </div>
+</section>

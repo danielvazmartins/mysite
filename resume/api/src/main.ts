@@ -11,7 +11,7 @@ async function bootstrap() {
 
 	// Aplica regras de validação nas requisições usando DTO
 	app.useGlobalPipes(new ValidationPipe({
-		whitelist: true
+		whitelist: true // Remove campos que não estejam no DTO
 	}))
 
   	await app.listen(3000);

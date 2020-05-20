@@ -1,0 +1,26 @@
+:host {
+    display: flex;
+    justify-content: center;
+
+    .panel-content {
+        width: 500px;
+        
+        .page-box {
+            form {
+                flex: 1;
+            }
+
+            .buttons {
+                position: absolute;
+                bottom: -25px;
+                right: 125px;
+                z-index: 1;
+            }
+
+            .bg {
+                width: 160px;
+                background: #FFF url(/assets/images/background-cv.png) no-repeat right center;
+            }
+        }
+    }
+}

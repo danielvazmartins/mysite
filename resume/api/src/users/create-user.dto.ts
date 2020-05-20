@@ -1,12 +1,12 @@
-import { IsEmail, IsNotEmpty } from 'class-validator'
+import { IsEmail, IsNotEmpty, Length, MinLength } from 'class-validator'
 
 export class CreateUserDto {
     @IsNotEmpty()
     fullName: String
 
-    @IsEmail()
+    @IsEmail({}, { message: 'Formato do e-mail inválido!'})
     email: String
 
-    @IsNotEmpty()
+    @MinLength(6, { message: 'A senha deve conter no mínimo 6 caracteres!'})
     password: String
 }

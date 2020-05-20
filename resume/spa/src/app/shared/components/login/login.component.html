@@ -1,0 +1,9 @@
+<app-popup *ngIf="showWindow" (close)="btClose()">
+    <h1 class="title">Bem Vindo</h1>
+    <p>Se já possui cadastro, entre e gerencie seus currículos</p>
+    <form [formGroup]="formLogin">
+        <input type="email" name="email" id="email" placeholder="E-mail" formControlName="email">
+        <input type="password" name="password" id="password" placeholder="Senha" formControlName="password">
+        <button class="bt primary" (click)="btLogin()">Entrar</button>
+    </form>
+</app-popup>

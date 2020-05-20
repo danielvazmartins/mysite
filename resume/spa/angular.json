@@ -47,6 +47,8 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/styles/font-roboto.scss",
+              "src/assets/styles/panel.scss",
               "src/styles.scss"
             ],
             "scripts": []

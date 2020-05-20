@@ -1,0 +1,125 @@
+@import "./panel-colors.scss";
+
+.panel {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f0f0f0;
+    min-height: 100%;
+
+    > ng-component {
+        flex: 1;
+    }
+
+    .page-title {
+        color: $blue-primary;
+        font-size: 40px;
+    }
+
+    .page-box {
+        padding: 20px 20px 50px 20px;
+        border: 2px solid $blue-primary;
+        border-radius: 25px;
+        background: #fff;
+        display: flex;
+        position: relative;
+
+        &:before {
+            content: '';
+            background: url(/assets/images/background-box-border.png) no-repeat;
+            width: 230px;
+            height: 55px;
+            position: absolute;
+            right: -2px;
+            bottom: -3px;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    
+        .form-line {
+            display: flex;
+    
+            .form-col {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+    
+                &:first-child {
+                    margin-right: 20px;
+                }
+            }
+        }
+    
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            label {
+                color: $gray-dark;
+                font-size: 20px;
+            }
+        }
+    
+        input, textarea, select {
+            width: 100%;
+            border: 1px solid $gray-dark;
+            box-shadow: 3px 5px 3px $gray-shadow;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 10px;
+            appearance: none;
+        }
+
+        textarea {
+            height: 100%;
+        }
+
+        .select-wrapper {
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                right: 16px;
+                top: 16px;
+                border: 10px solid;
+                border-color: $gray-dark transparent transparent transparent;
+                pointer-events: none;
+            }
+        }
+    }
+
+    .bt {
+        display: inline-block;
+        width: fit-content;
+        background: #fff;
+        text-transform: uppercase;
+        padding: 10px 30px;
+        border-radius: 25px;
+        box-shadow: 3px 5px 3px $gray-shadow;
+        cursor: pointer;
+        transition: all ease-in-out 200ms;
+    
+        &.primary {
+            border: 3px solid $blue-primary;
+            color: $blue-primary;
+        }
+
+        &.secondary {
+            border: 3px solid $gray-dark;
+            color: $gray-dark;
+        }
+    
+        &:hover {
+            transform: scale(1.05,1.05);
+            background: #efefef;
+        }
+    }
+}

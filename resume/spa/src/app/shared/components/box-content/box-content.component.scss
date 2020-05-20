@@ -1,0 +1,23 @@
+@import "../../../../assets/styles/panel-colors.scss";
+
+:host {
+
+    .box {
+        padding: 20px 20px 50px 20px;
+        border: 2px solid $blue-primary;
+        border-radius: 25px;
+        background: #fff;
+        display: flex;
+        position: relative;
+
+        &:before {
+            content: '';
+            background: url(/assets/images/background-box-border.png) no-repeat;
+            width: 230px;
+            height: 55px;
+            position: absolute;
+            right: -2px;
+            bottom: -3px;
+        }
+    }
+}

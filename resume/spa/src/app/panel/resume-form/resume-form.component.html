@@ -1,0 +1,55 @@
+<section class="panel-content">
+    <h1 class="page-title">Cadastro de Currículo</h1>
+    <app-box-content>
+        <form [formGroup]="formResume">
+            <h3 class="sub-title">Dados da Aplicação</h3>
+            <div class="form-line">
+                <div class="form-col">
+                    <app-input-field label="Nome do Currículo" placeholder="Ex.: Currículo padrão" formControlName="name"></app-input-field>
+                    <app-select label="Modelo" [options]="modelOptions" formControlName="model"></app-select>
+                    <app-select label="Estilo" [options]="styleOptions" formControlName="style"></app-select>
+                </div>
+                <div class="form-col">
+                    <app-textarea-field 
+                        label="Descrição" 
+                        formControlName="description"
+                        placeholder="Informações sobre esta versão do currículo. Esse texto apenas ficará visível em seu painel, mas não irá aparecer dentro do currículo">
+                    </app-textarea-field>
+                </div>
+            </div>
+            <ng-container formGroupName="resume">
+                <h3 class="sub-title">Informações de Contato</h3>
+                <div class="form-line">
+                    <div class="form-col">
+                        <app-input-field label="Nome Completo" formControlName="name"></app-input-field>
+                        <div class="form-line">
+                            <div class="form-col">
+                                <app-input-field label="Ocupação / Cargo"></app-input-field>
+                            </div>
+                            <div class="form-col">
+                                <app-input-field label="Data de Nascimento"></app-input-field>
+                            </div>
+                        </div>
+                        <app-input-field label="E-mail"></app-input-field>
+                        <div class="form-line">
+                            <div class="form-col">
+                                <app-input-field label="Telefone"></app-input-field>
+                            </div>
+                            <div class="form-col">
+                                <app-input-field label="Telefone 2"></app-input-field>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-col photo">
+                        <div class="photo"></div>
+                    </div>
+                </div>
+                <app-input-field label="Endereço"></app-input-field>
+            </ng-container>
+        </form>
+        <div class="buttons">
+            <button class="bt secondary" (click)="btCancel()">Cancelar</button>
+            <button class="bt primary" (click)="btSave()">Salvar</button>
+        </div>
+    </app-box-content>
+</section>

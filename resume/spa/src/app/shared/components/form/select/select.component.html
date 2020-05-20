@@ -1,0 +1,8 @@
+<div class="form-field">
+    <label>{{label}}</label>
+    <div class="select-wrapper">
+        <select [ngModel]="value" (change)="onChange($event.target.value)">
+            <option *ngFor="let option of options" [value]="option.key">{{option.value}}</option>
+        </select>
+    </div>
+</div>

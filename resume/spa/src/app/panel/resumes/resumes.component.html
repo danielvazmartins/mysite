@@ -1,0 +1,24 @@
+<section class="panel-content">
+    <div class="header">
+        <h1 class="page-title">Meus Currículos</h1>
+        <div class="bt primary" routerLink="/panel/resume-form">Criar Novo</div>
+    </div>
+    <ng-container *ngIf="resumes$ | async as resumes">
+        <div class="page-box" *ngFor="let resume of resumes">
+            <div class="field">
+                <label>Nome do Currículo</label>
+                <span>{{resume.name}}</span>
+            </div>
+            <div class="field">
+                <label>Descrição</label>
+                <span>{{resume.description}}</span>
+            </div>
+            <button class="bt-icon share"></button>
+            <button class="bt-icon preview"></button>
+            <div class="buttons">
+                <button class="bt secondary" [routerLink]="['/panel/resume-form',resume._id]">Editar</button>
+                <button class="bt primary" (click)="btDelete(resume._id)">Excluir</button>
+            </div>
+        </div>
+    </ng-container>
+</section>

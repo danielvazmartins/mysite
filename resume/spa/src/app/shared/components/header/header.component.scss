@@ -1,0 +1,72 @@
+@import "../../../../assets/styles/panel-colors.scss";
+
+:host {
+    width: 100%;
+    background: url(/assets/images/bg-header.png) no-repeat;
+    background-size: 100% 96px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 20px;
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+
+        &.right {
+            justify-content: flex-end;
+        }
+
+        .bt-wrapper {
+            position: relative;
+            z-index: 1;
+            margin: 0 15px;
+
+            .bt-circle {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                border: 1px solid #0D81FA;
+                box-shadow: 5px 5px 3px #0000004b;
+                filter: blur(1px);
+                cursor: pointer;
+                position: relative;
+                z-index: 1;
+    
+                &.profile {
+                    background: #fff url('/assets/images/icon-profile.png') no-repeat 21px 17px;
+                }
+    
+                &.resumes {
+                    background: #fff url('/assets/images/icon-resumes.png') no-repeat 20px 18px;
+                }
+    
+                &.logout {
+                    background: #fff url('/assets/images/icon-logout.png') no-repeat 23px 23px;
+                }
+    
+            }
+            &.active span{
+                position: absolute;
+                background: $gray-dark;
+                box-shadow: 5px 5px 3px #0000004b;
+                width: 78px;
+                height: 12px;
+                border-radius: 50%;
+                top: 75px;
+                left: 5px;
+                z-index: -1;
+            }
+        }
+    }
+
+    .logo {
+        background: url(/assets/images/logo-header.png) no-repeat;
+        background-size: 100%;
+        width: 124px;
+        height: 124px;
+        margin: auto;
+        margin-top: -10px;
+    }
+}

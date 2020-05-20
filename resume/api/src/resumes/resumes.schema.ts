@@ -5,5 +5,11 @@ const ObjectId = mongoose.Schema.Types.ObjectId
 export const ResumesSchema = new mongoose.Schema({
     userId: ObjectId,
     name: String,
-    description: String
+    description: String,
+    model: String,
+    style: String,
+    resume: {
+        name: String,
+        occupation: String
+    }
 })

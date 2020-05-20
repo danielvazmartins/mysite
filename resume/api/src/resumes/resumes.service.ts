@@ -3,7 +3,7 @@ import { InjectModel } from "@nestjs/mongoose";
 
 import { Model } from "mongoose";
 
-import { CreateResumeDto } from "./create-resume.dto";
+import { ResumeDto } from "./resume.dto";
 import { Resume } from "./resume.interface";
 
 @Injectable()
@@ -41,7 +41,8 @@ export class ResumesService {
     }
 
     // Cadastra um novo curriculo
-    create(userId: string, resume: CreateResumeDto) {
+    create(userId: string, resume: ResumeDto) {
+        console.log(resume)
         return this.resumesModel.create({
             userId,
             ...resume
@@ -49,6 +50,26 @@ export class ResumesService {
         .then(result => {
             if(!result) throw new InternalServerErrorException();
             
+            return ({ status: 'success' })
+        })
+    }
+
+    // Atualiza um currículo
+    update(userId: string, resumeId: string, resume: ResumeDto) {
+        return this.resumesModel.updateOne({userId, _id: resumeId}, resume)
+        .then(result => {
+            if(!result) throw new InternalServerErrorException();
+
+            return ({ status: 'success' })
+        })
+    }
+
+    // Remove um currículo
+    delete(userId: string, resumeId: string) {
+        return this.resumesModel.deleteOne({userId, _id: resumeId})
+        .then(result => {
+            if(!result) throw new InternalServerErrorException();
+
             return ({ status: 'success' })
         })
     }

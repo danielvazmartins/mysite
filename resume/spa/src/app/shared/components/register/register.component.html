@@ -1,0 +1,11 @@
+<app-popup *ngIf="showWindow" (close)="btClose()">
+    <h1 class="title">Bem Vindo</h1>
+    <p>Faca seu cadastro, é totalmente gratuito</p>
+    <form [formGroup]="formRegister">
+        <input type="text" name="fullName" id="fullName" placeholder="Nome Completo" formControlName="fullName">
+        <input type="email" name="email" id="email" placeholder="E-mail" formControlName="email">
+        <input type="password" name="password" id="password" placeholder="Senha" formControlName="password">
+        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirme sua senha" formControlName="confirmPassword" autocomplete="off">
+        <button class="bt primary" (click)="btRegister()">Cadastrar</button>
+    </form>
+</app-popup>

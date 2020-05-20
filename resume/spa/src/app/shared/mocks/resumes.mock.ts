@@ -250,6 +250,16 @@ export const resumesMock = {
                 course: "Bacharel em Administração de Empresas Social"
             }],
             extraCourses: [{
+                dateConclusion: '05/2020',
+                institution: 'FGV',
+                workload: '05 horas',
+                course: 'Introdução ao Tema da Liderança'
+            }, {
+                dateConclusion: '04/2020',
+                institution: 'Udemy - Wlademir Ribeiro Prates',
+                workload: '05 horas',
+                course: 'Mercados Financeiros e Investimentos'
+            }, {
                 dateConclusion: '04/2020',
                 institution: 'Sebrae',
                 workload: '03 horas',

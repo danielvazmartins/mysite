@@ -1,0 +1,6 @@
+<app-popup *ngIf="alert" (close)="btClose()">
+    <div class="content" [ngClass]="alert.type">
+        <h1 class="title">Atenção</h1>
+        <p>{{alert.message}}</p>
+    </div>
+</app-popup>

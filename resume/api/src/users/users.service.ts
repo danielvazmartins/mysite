@@ -6,6 +6,7 @@ import { Model } from "mongoose";
 
 import { User } from "./user.interface";
 import { CreateUserDto } from "./create-user.dto";
+import { UpdateUserDto } from "./update-user-dto";
 
 @Injectable()
 export class UsersService {
@@ -17,6 +18,18 @@ export class UsersService {
     async findByEmail(email: string) {
         return await this.usersModel.findOne({
             email
+        })
+    }
+
+    async findById(id: string) {
+        return this.usersModel.findById(id, '-password')
+        .then(result => {
+            if(!result) throw new InternalServerErrorException();
+            
+            return ({ 
+                status: 'success',
+                data: result
+            })
         })
     }
 
@@ -37,6 +50,16 @@ export class UsersService {
                 
                 return ({ status: 'success' })
             })
+        })
+    }
+
+    // Atualiza os dados
+    update(_id: string, updateUserDto: UpdateUserDto){
+        return this.usersModel.updateOne({_id}, updateUserDto)
+        .then(result => {
+            if(!result) throw new InternalServerErrorException();
+
+            return ({ status: 'success' })
         })
     }
 }

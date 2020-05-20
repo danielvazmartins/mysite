@@ -1,0 +1,19 @@
+@import '../../../../../assets/styles/panel-colors.scss';
+
+:host {
+    .select-wrapper {
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            right: 16px;
+            top: 16px;
+            border: 10px solid;
+            border-color: $gray-dark transparent transparent transparent;
+            pointer-events: none;
+        }
+    }
+}
