@@ -1,8 +1,14 @@
-import { IsNotEmpty, IsNotEmptyObject } from "class-validator"
+import { IsNotEmpty, IsNotEmptyObject, IsString, IsDate } from "class-validator"
 
 class Resume {
     @IsNotEmpty()
     name: string
+
+    @IsString()
+    occupation: string
+
+    @IsString()
+    dateOfBirth: Date
 }
 
 export class ResumeDto {
@@ -11,6 +17,9 @@ export class ResumeDto {
 
     @IsNotEmpty()
     description: string
+
+    @IsString()
+    domain: string
 
     @IsNotEmpty()
     model: string

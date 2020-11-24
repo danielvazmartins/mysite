@@ -1,11 +1,11 @@
-<div class="style" [ngClass]="styleName">
+<div class="style" [ngClass]="styleName" *ngIf="resume">
     <div class="header">
       <h1>{{resume.name}}</h1>
       <p>{{resume.occupation}}</p>
     </div>
     <div class="box-resume">
       <div class="sidebar">
-          <div class="perfil-img">
+          <div class="perfil-img" *ngIf="resume.foto">
             <img [src]="resume.foto">
           </div>
           <app-data-group *ngIf="resume.dateOfBirth" title="Data de nascimento" [data]="resume.dateOfBirth"></app-data-group>

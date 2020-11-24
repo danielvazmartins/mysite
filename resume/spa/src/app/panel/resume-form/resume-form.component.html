@@ -6,6 +6,7 @@
             <div class="form-line">
                 <div class="form-col">
                     <app-input-field label="Nome do Currículo" placeholder="Ex.: Currículo padrão" formControlName="name"></app-input-field>
+                    <app-input-field label="Domínio" placeholder="Ex.: seumone.com.br" formControlName="domain"></app-input-field>
                     <app-select label="Modelo" [options]="modelOptions" formControlName="model"></app-select>
                     <app-select label="Estilo" [options]="styleOptions" formControlName="style"></app-select>
                 </div>
@@ -24,10 +25,10 @@
                         <app-input-field label="Nome Completo" formControlName="name"></app-input-field>
                         <div class="form-line">
                             <div class="form-col">
-                                <app-input-field label="Ocupação / Cargo"></app-input-field>
+                                <app-input-field label="Ocupação / Cargo" formControlName="occupation"></app-input-field>
                             </div>
                             <div class="form-col">
-                                <app-input-field label="Data de Nascimento"></app-input-field>
+                                <app-input-field label="Data de Nascimento" formControlName="dateOfBirth" placeHoder="Digite no formato dd/mm/aaaa"></app-input-field>
                             </div>
                         </div>
                         <app-input-field label="E-mail"></app-input-field>

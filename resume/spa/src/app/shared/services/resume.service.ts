@@ -26,11 +26,4 @@ export class ResumeService {
     getResume(id: number) {
         return resumesMock.resumes[id]
     }
-
-    getAllResumes() {
-        this.http.get('/api/resume')
-        .subscribe(response => {
-            console.log(response)
-        })
-    }
 }

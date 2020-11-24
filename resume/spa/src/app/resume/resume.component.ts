@@ -1,8 +1,9 @@
 import { Component, OnInit } from "@angular/core";
-
-import { ResumeService } from "../shared/services/resume.service";
 import { ActivatedRoute } from "@angular/router";
 import { Title } from "@angular/platform-browser";
+
+import { ResumeService } from "../shared/services/resume.service";
+import { ResumesService } from '../shared/services/resumes.service';
 
 @Component({
     selector: 'app-resume',
@@ -20,6 +21,7 @@ export class ResumeComponent implements OnInit {
 
     constructor(
         private resumeService: ResumeService,
+        private resumesService: ResumesService,
         private route: ActivatedRoute,
         private titleService: Title
     ) {}
@@ -32,10 +34,15 @@ export class ResumeComponent implements OnInit {
         this.styleName = this.route.snapshot.queryParams.style || this.resumeService.getStyleName(hostname)
 
         // Carrega os dados do currículo
-        this.resume = this.resumeService.getResume(resumeId)
-        // Altera o title do navegador
-        this.titleService.setTitle(this.resume.name)
+        //this.resume = this.resumeService.getResume(resumeId)
 
-        //this.resumeService.getAllResumes()
+        // Altera o title do navegador
+        //this.titleService.setTitle(this.resume.name)
+
+        this.resumesService.getByHost('danielvazmartins.com.br')
+        .subscribe(response => {
+            console.log(response)
+            this.resume = response['resume']
+        })
     }
 }

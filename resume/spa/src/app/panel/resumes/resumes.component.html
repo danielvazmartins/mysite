@@ -13,6 +13,10 @@
                 <label>Descrição</label>
                 <span>{{resume.description}}</span>
             </div>
+            <div class="field" *ngIf="resume.domain">
+                <label>Domínio</label>
+                <span>{{resume.domain}}</span>
+            </div>
             <button class="bt-icon share"></button>
             <button class="bt-icon preview"></button>
             <div class="buttons">

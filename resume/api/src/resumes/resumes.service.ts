@@ -1,4 +1,4 @@
-import { Injectable, InternalServerErrorException } from "@nestjs/common";
+import { Injectable, InternalServerErrorException, NotFoundException } from "@nestjs/common";
 import { InjectModel } from "@nestjs/mongoose";
 
 import { Model } from "mongoose";
@@ -40,9 +40,23 @@ export class ResumesService {
         })
     }
 
+    // Retorna um curriculo completo
+    getByHost(domain: string) {
+        return this.resumesModel.findOne({
+            domain
+        })
+        .then(result => {
+            if(!result) throw new NotFoundException
+            
+            return ({ 
+                status: 'success',
+                data: result
+            })
+        })
+    }
+
     // Cadastra um novo curriculo
     create(userId: string, resume: ResumeDto) {
-        console.log(resume)
         return this.resumesModel.create({
             userId,
             ...resume
@@ -61,6 +75,10 @@ export class ResumesService {
             if(!result) throw new InternalServerErrorException();
 
             return ({ status: 'success' })
+        })
+        .catch(error => {
+            console.log(error.message)
+            throw new InternalServerErrorException()
         })
     }
 

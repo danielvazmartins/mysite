@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param, UseGuards, Request, Put, Delete } from "@nestjs/common";
+import { Controller, Get, Post, Body, Param, UseGuards, Request, Put, Delete, Query } from "@nestjs/common";
 import { AuthGuard } from "@nestjs/passport";
 
 import { ResumeDto } from "./resume.dto";
@@ -10,7 +10,7 @@ export class ResumesController {
         private resumesService: ResumesService
     ) {}
 
-    // Retorna a lista de curriculos do usuario
+    // Retorna a lista de currículos do usuario
     @UseGuards(AuthGuard('jwt'))
     @Get('')
     async getAll(@Request() req) {
@@ -19,12 +19,18 @@ export class ResumesController {
     }
 
     // Retorna um curriculo completo (Publica)
+    @Get('public')
+    async getByHost(@Query('domain') domain:string) {
+        return await this.resumesService.getByHost(domain)
+    }
+
+    // Retorna um curriculo completo (Publica)
     @Get(':id')
     async getOne(@Param('id') id: string) {
         return await this.resumesService.getOne(id)
     }
 
-    // Cadastra um novo curriculo
+    // Cadastra um novo currículo
     @UseGuards(AuthGuard('jwt'))
     @Post('')
     async create(@Request() req, @Body() resume: ResumeDto) {
@@ -37,7 +43,6 @@ export class ResumesController {
     @Put(':id')
     async update(@Request() req, @Param('id') resumeId: string, @Body() resume: ResumeDto) {
         const userId = req.user.id
-        console.log(resume)
         return await this.resumesService.update(userId, resumeId, resume)
     }
 

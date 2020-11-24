@@ -43,10 +43,13 @@ export class ResumeFormComponent implements OnInit {
         this.formResume = this.formBuilder.group({
             name: [''],
             description: [''],
+            domain: [''],
             model: ['modern'],
             style: ['brown'],
             resume: this.formBuilder.group({
-                name: ['']
+                name: [''],
+                occupation: [''],
+                dateOfBirth: ['']
             })
         })
     }
@@ -54,14 +57,23 @@ export class ResumeFormComponent implements OnInit {
     loadData() {
         this.resumesService.getOne(this.resumeId)
         .subscribe(response => {
-            const {_id, userId, __v, ...resume} = response
-            this.formResume.setValue(resume)
-            /*this.formResume.setValue({
+            //const {_id, userId, __v, ...resume} = response
+            //this.formResume.setValue(resume)
+            const dateOfBirth = new Date(response['resume']['dateOfBirth'])
+            const dateOfBirthStr = ('0' + dateOfBirth.getDate()).slice(-2) + '/' + ('0' + (dateOfBirth.getMonth() + 1)).slice(-2) + '/' + dateOfBirth.getFullYear()
+
+            this.formResume.setValue({
                 name: response['name'],
                 description: response['description'],
+                domain: response['domain'] || '',
                 model: response['model'],
-                style: response['style']
-            })*/
+                style: response['style'],
+                resume: {
+                    name: response['resume']['name'],
+                    occupation: response['resume']['occupation'],
+                    dateOfBirth: response['resume']['dateOfBirth']
+                }
+            })
         })
     }
 
@@ -70,7 +82,13 @@ export class ResumeFormComponent implements OnInit {
     }
 
     btSave() {
-        const resume = this.formResume.value
+        let resume = this.formResume.value
+        const dateOfBirthStr:string = this.formResume.get('resume.dateOfBirth').value
+        console.log(dateOfBirthStr, +dateOfBirthStr)
+        console.log(this.formResume.get('resume.dateOfBirth'))
+        const dateOfBirth = new Date(+dateOfBirthStr.substr(4,4), +dateOfBirthStr.substr(2,2) -1, +dateOfBirthStr.substr(0,2))
+        console.log(dateOfBirth)
+        //resume['resume']['dateOfBirth'] = dateOfBirth 
         //return console.log(resume)
         if (this.resumeId) {
             this.resumesService.update(this.resumeId, resume)
