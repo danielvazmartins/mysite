@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsNotEmptyObject, IsString, IsDate } from "class-validator"
+import { IsNotEmpty, IsNotEmptyObject, IsString, IsDate, IsEmail } from "class-validator"
 
 class Resume {
     @IsNotEmpty()
@@ -9,6 +9,9 @@ class Resume {
 
     @IsString()
     dateOfBirth: Date
+
+    @IsEmail()
+    email: string
 }
 
 export class ResumeDto {

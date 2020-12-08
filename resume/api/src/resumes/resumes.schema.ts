@@ -12,6 +12,7 @@ export const ResumesSchema = new mongoose.Schema({
     resume: {
         name: String,
         occupation: String,
-        dateOfBirth: String
+        dateOfBirth: String,
+        email: String
     }
 })

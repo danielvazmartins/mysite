@@ -49,7 +49,8 @@ export class ResumeFormComponent implements OnInit {
             resume: this.formBuilder.group({
                 name: [''],
                 occupation: [''],
-                dateOfBirth: ['']
+                dateOfBirth: [''],
+                email: ['']
             })
         })
     }
@@ -71,7 +72,8 @@ export class ResumeFormComponent implements OnInit {
                 resume: {
                     name: response['resume']['name'],
                     occupation: response['resume']['occupation'],
-                    dateOfBirth: response['resume']['dateOfBirth']
+                    dateOfBirth: response['resume']['dateOfBirth'],
+                    email: response['resume']['email'] || ''
                 }
             })
         })
