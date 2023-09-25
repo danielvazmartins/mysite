@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, FormArray } from '@angular/forms';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 
@@ -15,6 +15,7 @@ export class ResumeFormComponent implements OnInit {
     resumeId: string
     modelOptions: SelectOption[]
     styleOptions: SelectOption[]
+    skillType: string = ''
 
     constructor(
         private formBuilder: FormBuilder,
@@ -50,7 +51,13 @@ export class ResumeFormComponent implements OnInit {
                 name: [''],
                 occupation: [''],
                 dateOfBirth: [''],
-                email: ['']
+                email: [''],
+                mobile: [''],
+                mobile2: [''],
+                address: [''],
+                aboutMe: [''],
+                professionalGoals: [''],
+                skills: this.formBuilder.array([])
             })
         })
     }
@@ -73,10 +80,32 @@ export class ResumeFormComponent implements OnInit {
                     name: response['resume']['name'],
                     occupation: response['resume']['occupation'],
                     dateOfBirth: response['resume']['dateOfBirth'],
-                    email: response['resume']['email'] || ''
+                    email: response['resume']['email'] || '',
+                    mobile: response['resume']['mobile'] || '',
+                    mobile2: response['resume']['mobile2'] || '',
+                    address: response['resume']['address'] || '',
+                    aboutMe: response['resume']['aboutMe'],
+                    professionalGoals: response['resume']['professionalGoals'],
+                    skills: []
                 }
             })
+            for (let skill of response['resume']['skills']) {
+                this.skillType = skill['skillType']
+                //this.addSkillType()
+            }
         })
+    }
+
+    addSkillGroup() {
+        const formSkills = this.formResume.get('resume.skills') as FormArray
+        formSkills.push(this.formBuilder.group({
+            skillType: [''],
+            skillNames: [[]]
+        }))
+    }
+
+    addSkill(skillForm) {
+        console.log('addSkill', skillForm)
     }
 
     btCancel() {
@@ -92,6 +121,9 @@ export class ResumeFormComponent implements OnInit {
         console.log(dateOfBirth)
         //resume['resume']['dateOfBirth'] = dateOfBirth 
         //return console.log(resume)
+
+        console.log(resume)
+        //return
         if (this.resumeId) {
             this.resumesService.update(this.resumeId, resume)
             .subscribe(response => (response['status'] === 'success') && this.location.back())

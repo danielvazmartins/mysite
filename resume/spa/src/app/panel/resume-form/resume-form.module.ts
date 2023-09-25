@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NgxMaskModule } from 'ngx-mask';
 
@@ -19,7 +19,8 @@ import { FormModule } from 'src/app/shared/components/form/form.module';
         BoxContentModule,
         SelectModule,
         FormModule,
-        NgxMaskModule.forRoot()
+        NgxMaskModule.forRoot(),
+        FormsModule
     ],
     exports: [
         ResumeFormComponent

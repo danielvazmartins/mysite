@@ -13,6 +13,15 @@ export const ResumesSchema = new mongoose.Schema({
         name: String,
         occupation: String,
         dateOfBirth: String,
-        email: String
+        email: String,
+        mobile: Number,
+        mobile2: Number,
+        address: String,
+        aboutMe: String,
+        professionalGoals: String,
+        skills: [{
+            skillType: String,
+            skillNames: []
+        }]
     }
 })

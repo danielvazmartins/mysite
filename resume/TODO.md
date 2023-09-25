@@ -10,6 +10,8 @@
 - Efeito mouse over nos botoes
 - Efeito para mostrar os popups
 - Destacar erro nos campos de formulario
+- Colocar mascaras nos campos de telefone
+- Criar componente de loading
 
 # Json do Curriculo
 - Alterar o address para um array (tirar line1, line2)

@@ -18,6 +18,30 @@
                 margin-bottom: 10px;
             }
 
+            .sub-title-plus {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 2px solid $blue-primary;
+                margin-bottom: 10px;
+                position: relative;
+
+                span {
+                    color: $blue-primary;
+                    font-size: 28px;
+                }
+
+                .bt-add-box {
+                    width: 40px;
+                    height: 40px;
+                    background: $blue-primary;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 0;
+                    top: 16px;
+                    cursor: pointer;
+                }
+            }
+
             textarea {
                 height: 100%;
             }
@@ -34,6 +58,28 @@
                     border-radius: 8px;
                     margin: 10px 0;
                 }
+            }
+
+            .bt-square {
+                width: 40px;
+                height: 40px;
+                background: url('/assets/images/icon-add.png') no-repeat center;
+                background-size: 24px;
+                border: 1px solid $gray-dark;
+                box-shadow: 3px 5px 3px $gray-shadow;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                margin-left: -10px;
+                align-self: flex-end;
+                cursor: pointer;
+            }
+
+            .bt-add-item, .bt-remove-box {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                border: 1px solid $gray-dark;
+                box-shadow: 3px 5px 3px $gray-shadow;
             }
         }
 

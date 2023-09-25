@@ -12,6 +12,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 export class TextareaFieldComponent implements ControlValueAccessor{
     @Input() label: string
     @Input() placeholder: string = ''
+    @Input() rows: number
 
     value: String
 

@@ -34,7 +34,7 @@
                         <app-input-field label="E-mail" formControlName="email"></app-input-field>
                         <div class="form-line">
                             <div class="form-col">
-                                <app-input-field label="Telefone"></app-input-field>
+                                <app-input-field label="Telefone" formControlName="mobile"></app-input-field>
                             </div>
                             <div class="form-col">
                                 <app-input-field label="Telefone 2"></app-input-field>
@@ -46,6 +46,48 @@
                     </div>
                 </div>
                 <app-input-field label="Endereço"></app-input-field>
+                <h3 class="sub-title">Apresentação</h3>
+                <div class="form-line">
+                    <div class="form-col">
+                        <app-textarea-field 
+                            label="Sobre mim" 
+                            formControlName="aboutMe"
+                            placeholder="Escreva um pouco sobre você, sua experiência profissional e ou acadêmica, seus hobbies e o que mais quiser apresentar no seu currículo, essa é sua apresentação no currículo e muito importante"
+                            rows=10>
+                        </app-textarea-field>
+                        <app-textarea-field 
+                            label="Objetivo Profissional" 
+                            formControlName="professionalGoals"
+                            placeholder="Fale sobre o seu objetivo atual, o que está procurando e seus planos para o futuro"
+                            rows=10>
+                        </app-textarea-field>
+                    </div>
+                </div>
+                <div class="sub-title-plus">
+                    <span>Qualificações</span>
+                    <div class="bt-add-box" (click)="addSkillGroup()"></div>
+                </div>
+                <div class="box-group" *ngFor="let skillForm of formResume.get('resume.skills')['controls']" [formGroup]="skillForm">
+                    <div class="form-line">
+                        <div class="form-col">
+                            <app-input-field label="Tipo de Qualificação" formControlName="skillType"></app-input-field>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-line">
+                                <app-input-field label="Habilidade / Ferramenta" #skill></app-input-field>
+                                <div class="bt-add-item" (click)="addSkill(skill)"></div>
+                                <div class="bt-remove-box"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <ng-container *ngFor="let skillGroup of formResume.get('resume.skills')['controls']">
+                    <div [formGroup]="skillGroup">
+                        <input type="text" formControlName="skillType">
+                        <span>Type: {{skillGroup.get('skillType').value}}</span>
+                        <p *ngFor="let tool of skillGroup.get('tools').value">{{tool}}</p>
+                    </div>
+                </ng-container> -->
             </ng-container>
         </form>
         <div class="buttons">
