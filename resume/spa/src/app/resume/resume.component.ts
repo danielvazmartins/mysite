@@ -34,15 +34,15 @@ export class ResumeComponent implements OnInit {
         this.styleName = this.route.snapshot.queryParams.style || this.resumeService.getStyleName(hostname)
 
         // Carrega os dados do currículo
-        //this.resume = this.resumeService.getResume(resumeId)
+        this.resume = this.resumeService.getResume(resumeId)
 
         // Altera o title do navegador
         //this.titleService.setTitle(this.resume.name)
 
-        this.resumesService.getByHost('danielvazmartins.com.br')
+        /*this.resumesService.getByHost('danielvazmartins.com.br')
         .subscribe(response => {
             console.log(response)
             this.resume = response['resume']
-        })
+        })*/
     }
 }

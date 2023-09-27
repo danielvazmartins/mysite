@@ -13,10 +13,10 @@ export class ExperienceGroupComponent implements OnInit {
   @Input() subTitle: string
   @Input() data: string
   @Input() dataLines: string[]
+  @Input() hide: boolean
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }
