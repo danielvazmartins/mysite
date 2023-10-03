@@ -32,17 +32,22 @@ export class ResumeComponent implements OnInit {
         // Pega os parâmetro da URL
         const resumeId = this.route.snapshot.queryParams.resumeId || this.resumeService.getResumeId(hostname)
         this.styleName = this.route.snapshot.queryParams.style || this.resumeService.getStyleName(hostname)
+        console.log({
+            hostname,
+            resumeId, 
+            styleName: this.styleName
+        })
 
-        // Carrega os dados do currículo
-        this.resume = this.resumeService.getResume(resumeId)
+        // Carrega os dados do currículo (utilizando mock local, sem banco de dados)
+        //this.resume = this.resumeService.getResume(resumeId)
 
         // Altera o title do navegador
         //this.titleService.setTitle(this.resume.name)
 
-        /*this.resumesService.getByHost('danielvazmartins.com.br')
+        this.resumesService.getByHost('danielvazmartins.com.br')
         .subscribe(response => {
             console.log(response)
             this.resume = response['resume']
-        })*/
+        })
     }
 }
