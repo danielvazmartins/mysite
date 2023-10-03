@@ -23,6 +23,7 @@ export class ResumeService {
         return 'brow'
     }
 
+    // Retornar currículo de mock (para desenvolvimento sem o banco de dados)
     getResume(id: number) {
         return resumesMock.resumes[id]
     }

@@ -1,5 +1,6 @@
 {
     "database": {
-        "connection": "mongodb+srv://resume:teste10@cluster0-ntrxt.mongodb.net/resume?retryWrites=true&w=majority"
+        "connection-old": "mongodb+srv://resume:teste10@cluster0-ntrxt.mongodb.net/resume?retryWrites=true&w=majority",
+        "connection": "mongodb+srv://resume:teste10@cluster0.s67s3pf.mongodb.net/resume"
     }
 }
