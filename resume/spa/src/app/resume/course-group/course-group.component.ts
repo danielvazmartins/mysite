@@ -9,10 +9,9 @@ export class CourseGroupComponent implements OnInit {
 
   @Input() title: string
   @Input() data: string
+  @Input() show: boolean = true
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() { }
 }
