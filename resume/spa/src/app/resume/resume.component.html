@@ -32,18 +32,18 @@
                 <h3 class="sub-title" *ngIf="resume.certifications">Certificações atuais</h3>
                 <app-course-group  *ngFor="let course of resume.certifications" title="{{course.dateConclusion}} - {{course.institution}}" [data]="course.course"></app-course-group>
                 <h3 class="sub-title" *ngIf="resume.certifications">Outras certificações</h3>
-                <app-course-group  *ngFor="let course of resume.othersCertifications" title="{{course.dateConclusion}} - {{course.institution}}" [data]="course.course"></app-course-group>
+                <app-course-group  *ngFor="let course of resume.othersCertifications" title="{{course.dateConclusion}} - {{course.institution}}" [data]="course.course" [show]="course.show"></app-course-group>
                 <h3 class="sub-title" *ngIf="resume.technicalQualifications">Formação Técnica</h3>
                 <app-course-group  *ngFor="let course of resume.technicalQualifications" title="{{course.dateConclusion}} - {{course.institution}}" [data]="course.course"></app-course-group>
             </div>
             <div class="col" *ngIf="resume.extraCourses">
                 <h3 class="sub-title">Formação Extra Curricular</h3>
-                <app-course-group  *ngFor="let course of resume.extraCourses" title="{{course.dateConclusion}} - {{course.institution}} ({{course.workload}})" [data]="course.course"></app-course-group>
+                <app-course-group  *ngFor="let course of resume.extraCourses" title="{{course.dateConclusion}} - {{course.institution}} ({{course.workload}})" [data]="course.course" [show]="course.show"></app-course-group>
             </div>
           </div>
           <div class="row">
               <h3 class="sub-title" *ngIf="resume.professionalExperience">Experiência Profissional</h3>
-              <app-experience-group *ngFor="let job of resume.professionalExperience" [dateFrom]="job.dateFrom" [dateTo]="job.dateTo" [title]="job.company" [subTitle]="job.position" [dataLines]="job.description" [hide]="job.hide"></app-experience-group>
+              <app-experience-group *ngFor="let job of resume.professionalExperience" [dateFrom]="job.dateFrom" [dateTo]="job.dateTo" [title]="job.company" [subTitle]="job.position" [dataLines]="job.description" [show]="job.show"></app-experience-group>
           </div>
         </div>
     </div>
