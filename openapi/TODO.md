@@ -1,0 +1,2 @@
+- Criar o ResponseUserDTO no get de user by id
+- Criar o schema de user no openapi e utilizar como referencia

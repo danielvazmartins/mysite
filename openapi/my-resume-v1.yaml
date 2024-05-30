@@ -1,0 +1,95 @@
+openapi: 3.0.2
+info:
+  title: My Resume
+  description: "Application to make custom resumes. Edit, share and export all. This aplication is used to study, applying best practices of development. It is 100% free"
+  contact:
+    name: Daniel Vaz Villalobos Martins
+    url: https://www.linkedin.com/in/danielvazmartins/
+    email: danielvazmartins@gmail.com
+  version: 1.0.0
+paths:
+  /users:
+    post:
+      tags:
+        - users
+      summary: Sign Up a new users
+      requestBody:
+        description: User data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateUserDTO'
+      responses:
+        "201":
+          description: CREATED
+          headers:
+            Location:
+              description: URL of new resource
+              schema:
+                type: string
+                format: uri
+                example: /users/12345
+  /users/{userId}:
+    get:
+      tags:
+        - users
+      summary: Return the user profile
+      parameters:
+      - name: userId
+        in: path
+        required: true
+        description: ID of a specifc user
+        content:
+          text/plain;charset=utf-8:
+            example: 123456
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: '#/components/schemas/ResponseUserDTO'
+        404:
+          description: User not found
+  /resumes:
+    get:
+      tags:
+        - resumes
+      summary: Return all resumes
+      responses:
+        "200":
+          description: OK
+    post:
+      tags:
+        - resumes
+      summary: Create a new resume
+      responses:
+        204:
+          description: CREATED
+components:
+  schemas:
+    CreateUserDTO:
+      type: object
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+    ResponseUserDTO:
+      type: object
+      properties:
+        userId:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+
+  
